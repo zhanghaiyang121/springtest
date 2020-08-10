@@ -6,4 +6,8 @@
         SELECT * FROM user WHERE name = #{name} AND password = #{password}
     </select>
 
+    <select id="getall"  resultType="com.example.demo.bean.UserBean">
+        SELECT * FROM user
+    </select>
+
 </mapper>

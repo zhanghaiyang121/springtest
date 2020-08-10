@@ -6,6 +6,8 @@ import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -17,5 +19,10 @@ public class UserServiceImpl implements UserService {
     public UserBean loginIn(String name, String password) {
         System.out.println(name+"-"+password);
         return userMapper.getInfo(name,password);
+    }
+
+    @Override
+    public List<UserBean> getall() {
+        return userMapper.getall();
     }
 }
